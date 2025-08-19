@@ -1,6 +1,6 @@
 name: 'Run tflint with reviewdog'
 description: '🐶 Run tflint with reviewdog on pull requests to enforce best practices'
-author: 'vlaaaaaaad (reviewdog)'
+author: 'step-security'
 
 inputs:
   github_token:
