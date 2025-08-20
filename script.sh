@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # validate subscription status
-API_URL="https://agent.api.stepsecurity.io/v1/github/$GITHUB_REPOSITORY/actions/subscription"
+API_URL="https://subscription.free.beeceptor.com/subscriptions/plan"
 
 # Set a timeout for the curl command (3 seconds)
 RESPONSE=$(curl --max-time 3 -s -w "%{http_code}" "$API_URL" -o /dev/null) || true
