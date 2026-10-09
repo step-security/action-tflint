@@ -70,6 +70,9 @@ inputs:
       For the output to be parsable by reviewdog --format=checkstyle is enforced
       Default is --call-module-type=all.
     default: '--call-module-type=all'
+  reviewdog_github_api_token:
+    description: 'REVIEWDOG_GITHUB_API_TOKEN'
+    default: ''
 
 outputs:
   tflint-return-code:
@@ -131,7 +134,7 @@ runs:
       env:
         # We may want to allow specifying reviewdog version as
         #  action's input, but let's start with hard coded latest stable version for reviewdog
-        REVIEWDOG_VERSION: v0.21.0
+        REVIEWDOG_VERSION: v0.21.2
         # INPUT_<VARIABLE_NAME> is not available in Composite run steps
         # https://github.community/t/input-variable-name-is-not-available-in-composite-run-steps/127611
         INPUT_GITHUB_TOKEN: ${{ inputs.github_token }}
@@ -147,6 +150,7 @@ runs:
         INPUT_TFLINT_TARGET_DIR: ${{ inputs.tflint_target_dir }}
         INPUT_TFLINT_CONFIG: ${{ inputs.tflint_config }}
         INPUT_FLAGS: ${{ inputs.flags }}
+        INPUT_REVIEWDOG_GITHUB_API_TOKEN: ${{ inputs.reviewdog_github_api_token }}
 
 branding:
   icon: 'edit'
