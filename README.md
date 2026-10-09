@@ -2,7 +2,7 @@
 
 # GitHub Action: Run tflint with reviewdog
 
-This action runs [tflint](https://github.com/wata727/tflint) with
+This action runs [tflint](https://github.com/terraform-linters/tflint) with
 [reviewdog](https://github.com/reviewdog/reviewdog) on pull requests
 to enforce best practices.
 
@@ -160,4 +160,3 @@ jobs:
 
 This reviewdog action template itself is integrated with reviewdog to run lints
 which is useful for Docker container based actions.
-
