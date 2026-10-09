@@ -96,8 +96,14 @@ The default is `.tflint.hcl`
 ### `flags`
 
 Optional. List of arguments to send to `tflint`.
-For the output to be parsable by reviewdog [`--format=checkstyle` is enforced](./entrypoint.sh).
+For the output to be parsable by reviewdog [`--format=checkstyle` is enforced](./script.sh).
 The default is `--call-module-type=all`.
+
+### `reviewdog_github_api_token`
+
+Optional. The value of REVIEWDOG_GITHUB_API_TOKEN environment variable.
+If value is empty string, use `github_token` value.
+The default is `''`.
 
 ## Outputs
 
